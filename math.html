@@ -25,34 +25,48 @@
   </body>
 
   <script>
+    // ? Kek biasaa step 1
     const operator = document.getElementById('operator')
+
+    // ? Yang ini kita isi variabel operatorValue nya dengan opsi dari elemen operator dengan urutan index sesuai dengan opsi yang terpilih (operator.options[operator.selectedIndex]). Terus kita ambil text nya dengan .text
     let operatorValue = operator.options[operator.selectedIndex].text
 
-    const number_1 = document.getElementById('number_1')
-    const number_2 = document.getElementById('number_2')
+    // ? Yang ini ez la :)
+    const number_1 = document.getElementById('number_1').value
+    const number_2 = document.getElementById('number_2').value
     const calculate = document.getElementById('calculate')
     const hasil = document.getElementById('hasil')
 
+    // ? Samaa, ini detect kalo ada perubahan opsi di select nya
     operator.addEventListener('change', function () {
+      // ? Kalo ada perubahan kita update variabel operatorValue dengan opsi baru yang terpilih
       operatorValue = this.options[this.selectedIndex].text
     })
 
+    // ? Sama part 3
     calculate.addEventListener('click', function () {
+      // ? Inii kita bikin variabel untuk simpan hasilnya dulu. Kita kasi kosong dan pake let karna kita bakal isi ulang valuenya
       let result
+
+      // ? Ini bole di abaikan la...
       console.log(operatorValue)
 
+      // ? Panjang bet :) Ini ma paham banget la yaw...
       if (operatorValue === '+') {
-        result = parseInt(number_1.value) + parseInt(number_2.value)
+        // ? Kok nda number_1.value dan number_2.value? Uda pindahan ke atas dia bosen di bawa terus
+        result = parseInt(number_1) + parseInt(number_2)
       } else if (operatorValue === '-') {
-        result = parseInt(number_1.value) - parseInt(number_2.value)
+        result = parseInt(number_1) - parseInt(number_2)
       } else if (operatorValue === '*') {
-        result = parseInt(number_1.value) * parseInt(number_2.value)
+        result = parseInt(number_1) * parseInt(number_2)
       } else if (operatorValue === '/') {
-        result = parseInt(number_1.value) / parseInt(number_2.value)
+        result = parseInt(number_1) / parseInt(number_2)
       }
 
+      // ? Abaikan ja part 2
       console.log(result)
 
+      // ? Teruss hasilnya kita set ke h1 kita deh yang id nya hasil
       hasil.innerHTML = result
     })
   </script>

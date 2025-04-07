@@ -35,22 +35,31 @@
     <button id="close">Close!</button>
 
     <script>
+      // ? Mengambil elemen html
       const open = document.getElementById('open')
       const close = document.getElementById('close')
       const p = document.getElementsByTagName('p')
 
+      // ? Membuat event untuk tombol dengan id open
       open.addEventListener('click', function () {
+        // ? Melihat isi dari variabel const p pada console di web browser
         console.log(p)
+
+        // ? Set display block untuk tag p pertama
         p[0].style.display = 'block'
 
+        // ? Loop elemen p untuk set semua tag p dengan display block
         for (let i = 0; i < p.length; i++) {
           p[i].style.display = 'block'
         }
       })
 
+      // ? Membuat event untuk tombol dengan id close
       close.addEventListener('click', function () {
+        // ? Set display none untuk tag p pertama
         p[0].style.display = 'none'
 
+        // ? Loop elemen p untuk set semua tag p dengan display none
         for (let i = 0; i < p.length; i++) {
           p[i].style.display = 'none'
         }

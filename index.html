@@ -16,15 +16,23 @@
   </body>
 
   <script>
+    // ? Mengambil elemen html
     const s = document.getElementById('button')
     const cc = document.getElementById('change_color')
 
+    // ? Membuat event untuk tombol dengan id button
     s.addEventListener('click', function () {
+      // Menampilkan alert halo pada bagian atas web browser saat tombol di tekan
       alert('Halo')
+
+      // ? Ini buat buka di tab baru
       //   window.open('/about.html')
+
+      // ? Ini nda
       window.location.href = '/about.html'
     })
 
+    // ? Nda perlu ketik ulang lagi la ya... Da tawu la :)
     cc.addEventListener('click', function () {
       this.style.backgroundColor = 'white'
       this.style.color = 'black'
