@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+  </head>
+  <body>
+    <h1>About</h1>
+    <p style="display: none">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo veritatis
+      commodi quo ex perspiciatis, nihil neque pariatur nisi natus. Non magni
+      voluptatum voluptatem. Non, quae. Id consectetur minima cum est?
+    </p>
+
+    <p style="display: none">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo veritatis
+      commodi quo ex perspiciatis, nihil neque pariatur nisi natus. Non magni
+      voluptatum voluptatem. Non, quae. Id consectetur minima cum est?
+    </p>
+
+    <p style="display: none">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo veritatis
+      commodi quo ex perspiciatis, nihil neque pariatur nisi natus. Non magni
+      voluptatum voluptatem. Non, quae. Id consectetur minima cum est?
+    </p>
+
+    <p style="display: none">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo veritatis
+      commodi quo ex perspiciatis, nihil neque pariatur nisi natus. Non magni
+      voluptatum voluptatem. Non, quae. Id consectetur minima cum est?
+    </p>
+
+    <button id="open">Open!</button>
+    <button id="close">Close!</button>
+
+    <script>
+      const open = document.getElementById('open')
+      const close = document.getElementById('close')
+      const p = document.getElementsByTagName('p')
+
+      open.addEventListener('click', function () {
+        console.log(p)
+        p[0].style.display = 'block'
+
+        for (let i = 0; i < p.length; i++) {
+          p[i].style.display = 'block'
+        }
+      })
+
+      close.addEventListener('click', function () {
+        p[0].style.display = 'none'
+
+        for (let i = 0; i < p.length; i++) {
+          p[i].style.display = 'none'
+        }
+      })
+    </script>
+  </body>
+</html>

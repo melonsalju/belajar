@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button id="button">Click Me!</button>
+
+    <button id="change_color">Change Color</button>
+
+    <button onclick="window.location.href = 'math.html'">Do Math</button>
+  </body>
+
+  <script>
+    const s = document.getElementById('button')
+    const cc = document.getElementById('change_color')
+
+    s.addEventListener('click', function () {
+      alert('Halo')
+      //   window.open('/about.html')
+      window.location.href = '/about.html'
+    })
+
+    cc.addEventListener('click', function () {
+      this.style.backgroundColor = 'white'
+      this.style.color = 'black'
+    })
+  </script>
+</html>
